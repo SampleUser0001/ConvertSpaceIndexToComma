@@ -1,0 +1,12 @@
+version: '3'
+services:
+  node:
+    build: .
+    container_name: converter
+    volumes:
+      - ./start.sh:/start.sh
+      - ./app:/app
+      - ./files:/files
+    environment: 
+      - input_file=/files/input.txt
+      - output_file=/files/output.txt

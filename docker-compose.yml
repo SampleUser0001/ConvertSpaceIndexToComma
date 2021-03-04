@@ -1,0 +1,10 @@
+version: '3'
+services:
+  node:
+    image: ittimfn/convert_space_index_to_comma:latest
+    container_name: converter
+    volumes:
+      - ./files:/files
+    environment: 
+      - input_file=/files/input.txt
+      - output_file=/files/output.txt
